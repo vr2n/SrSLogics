@@ -3,130 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubham Singh | Data & Analytics Strategist</title>
+    <title>SrS Logics | Data Strategy & Architecture</title>
     <style>
         :root {
-            --bg-color: #121212;
-            --card-bg: #1e1e1e;
-            --primary-accent: #d32f2f; /* Matching the logo red */
-            --text-main: #ffffff;
-            --text-dim: #b0b0b0;
+            --bg-color: #0a0a0a;
+            --accent-color: #00ffcc; /* Strategic Neon Teal */
+            --text-main: #e0e0e0;
+            --text-dim: #a0a0a0;
+            --card-bg: #161616;
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            font-family: 'Inter', -apple-system, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
+            line-height: 1.6;
         }
 
         header {
-            padding: 40px 20px;
-            text-align: center;
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #333;
         }
 
         .logo {
-            width: 80px;
-            height: auto;
-            margin-bottom: 10px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: var(--accent-color);
+        }
+
+        .hero {
+            padding: 8rem 2rem;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         h1 {
-            font-size: 2.5rem;
-            margin: 10px 0;
-            letter-spacing: 1px;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: -2px;
         }
 
-        .subtitle {
-            color: var(--primary-accent);
-            font-size: 1.2rem;
-            font-weight: 300;
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-dim);
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--accent-color);
             text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-
-        .hero-section {
-            max-width: 800px;
-            text-align: center;
-            padding: 60px 20px;
-        }
-
-        .tagline {
-            font-size: 1.5rem;
-            line-height: 1.6;
-            color: var(--text-dim);
-            font-style: italic;
-        }
-
-        .cta-container {
-            margin-top: 40px;
-        }
-
-        .btn {
-            background-color: var(--primary-accent);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: transform 0.2s, background-color 0.2s;
-            display: inline-block;
-        }
-
-        .btn:hover {
-            background-color: #b71c1c;
-            transform: translateY(-2px);
-        }
-
-        .contact-footer {
-            margin-top: auto;
-            padding: 40px;
-            border-top: 1px solid #333;
-            width: 100%;
-            text-align: center;
-            color: var(--text-dim);
+            letter-spacing: 2px;
             font-size: 0.9rem;
+            margin-bottom: 3rem;
         }
 
-        .social-links a {
-            color: var(--text-dim);
-            margin: 0 15px;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #222;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--accent-color);
+        }
+
+        .about {
+            background: #111;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-button {
+            background: var(--accent-color);
+            color: black;
+            padding: 1rem 2rem;
             text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 2rem;
         }
 
-        .social-links a:hover {
-            color: var(--primary-accent);
+        footer {
+            padding: 4rem 2rem;
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            border-top: 1px solid #222;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="logo.png" alt="Company Logo" class="logo">
-        <h1>SHUBHAM SINGH</h1>
-        <div class="subtitle">Data & Analytics Strategist</div>
+        <div class="logo">SrS LOGICS</div>
+        <nav>shubhamsinghvr@gmail.com</nav>
     </header>
 
-    <section class="hero-section">
-        <p class="tagline">"Turning data chaos into actionable intelligence."</p>
-        
-        <div class="cta-container">
-            <a href="mailto:shubham.singh@email.com" class="btn">Start a Project</a>
+    <section class="hero">
+        <h1>Architecting Data.<br>Engineering Growth.</h1>
+        <p>High-performance data strategy for firms that demand precision. Founded by a UoN Data Scientist, we turn raw complexity into scalable competitive advantages.</p>
+        <a href="mailto:shubhamsinghvr@gmail.com" class="cta-button">INITIATE STRATEGY</a>
+    </section>
+
+    <div class="section-title">Technical Expertise</div>
+    <section class="grid">
+        <div class="card">
+            <h3>Massive Data Processing</h3>
+            <p>Architecting pipelines for 500,000+ records, ensuring zero-latency batch processing and complete data integrity.</p>
+        </div>
+        <div class="card">
+            <h3>Backend Engineering</h3>
+            <p>Robust, high-security APIs developed with FastAPI and SQL to serve as the backbone of digital infrastructure.</p>
+        </div>
+        <div class="card">
+            <h3>Strategic Insights</h3>
+            <p>Advanced predictive modeling and strategic roadmaps that transform raw data into founder-level decisions.</p>
         </div>
     </section>
 
-    <footer class="contact-footer">
-        <p>+91 9270825106 | shubham.singh@email.com</p>
-        <div class="social-links">
-            <a href="#">LinkedIn</a>
-            <a href="#">Twitter</a>
-            <a href="#">Portfolio</a>
+    <section class="about">
+        <div class="about-content">
+            <div class="section-title">The Philosophy</div>
+            <h2>Logic Over Noise.</h2>
+            <p>At SrS Logics, we don't react to volatility; we analyze it. Our systems are built to be Antifragile—maintaining peak performance and structural integrity regardless of external pressure.</p>
+            <p style="margin-top: 2rem; color: var(--text-dim);"><strong>Led by Shubham Singh</strong><br>MSc Data Science, University of Nottingham</p>
         </div>
-        <p style="margin-top: 20px; font-size: 0.7rem;">&copy; 2026 Shubham Singh. All Rights Reserved.</p>
+    </section>
+
+    <footer>
+        &copy; 2026 SrS Logics. Based in Nagpur. All Rights Reserved.
     </footer>
 
 </body>
