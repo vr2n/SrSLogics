@@ -80,7 +80,7 @@ p.lead {
 .leadership-vision {
   max-width:720px;
   margin:2rem auto 0;
-  color:var(--dim);
+  color:#b8b8b8;
   font-size:1.05rem;
 }
 
@@ -92,12 +92,15 @@ section {
   font-size:1.1rem;          /* ↑ readable */
   letter-spacing:3px;        /* keeps authority */
   font-weight:700;
-  margin-bottom:2.5rem;
+  margin-bottom:1.8rem;
   text-align:center;
   color:var(--accent);
 }
 .section-subtitle {
   margin-bottom:1.5rem;
+}
+section.center {
+  padding:4rem 2rem;
 }
 
 .grid {
@@ -115,6 +118,12 @@ section {
   border:1px solid #222;
   font-weight:500;
 }
+.problem .card {
+  padding:1.5rem;
+}
+.deliver {
+  padding-top:4rem;
+}
 
 .card h3 {
   color:var(--accent);
@@ -128,7 +137,12 @@ a:focus {
   outline:2px solid var(--accent);
   outline-offset:3px;
 }
-
+.soft-divider {
+  width:60px;
+  border:none;
+  border-top:1px solid #222;
+  margin:1.5rem auto 2rem;
+}
 
 footer {
   padding:3rem 2rem;
@@ -155,7 +169,7 @@ footer {
   <a class="cta" href="mailto:shubhamsinghvr@gmail.com">BOOK A STRATEGY CALL</a>
 </main>
 
-<section>
+<section class="problem">
   <div class="section-title">The Problem</div>
   <div class="grid">
     <div class="card">
@@ -173,7 +187,7 @@ footer {
   </div>
 </section>
 
-<section>
+<section class="deliver">
   <div class="section-title">What We Deliver</div>
   <div class="grid">
     <div class="card">
@@ -198,15 +212,15 @@ footer {
     <div class="section-title">How We Work</div>
     <div class="grid">
       <div class="card">
-        <h3>1. Diagnose</h3>
+        <h3>Diagnose</h3>
         <p>We identify structural failure points across pipelines, APIs, and data models.</p>
       </div>
       <div class="card">
-        <h3>2. Design</h3>
+        <h3>Design</h3>
         <p>We define architectures that scale without accumulating technical debt.</p>
       </div>
       <div class="card">
-        <h3>3. Execute</h3>
+        <h3>Execute</h3>
         <p>We build, fix, or guide execution with zero fluff and full accountability.</p>
       </div>
     </div>
@@ -216,6 +230,7 @@ footer {
     <div class="section-title">Leadership</div>
     <h2 class="section-subtitle">Founder & System Architect</h2>
     <p><strong>Shubham Singh</strong><br/>MSc Data Science — University of Nottingham</p>
+    <hr class="soft-divider">
     <p class="leadership-vision">
       The vision is to build data systems that remain correct under pressure — 
       systems that scale in volume, complexity, and decision impact without 
@@ -229,8 +244,6 @@ footer {
     <a class="cta" href="mailto:shubhamsinghvr@gmail.com">INITIATE STRATEGY</a>
 </section>
   
-
-
 <footer>
   © 2026 SrS Logics · India · Sole Proprietorship
 </footer>
