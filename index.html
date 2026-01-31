@@ -8,6 +8,7 @@
         :root {
             --bg-color: #0a0a0a;
             --accent-color: #00ffcc; /* Strategic Neon Teal */
+            --logo-red: #ff4d4d;    /* Matching your Hexagon Logo */
             --text-main: #e0e0e0;
             --text-dim: #a0a0a0;
             --card-bg: #161616;
@@ -22,17 +23,42 @@
         }
 
         header {
-            padding: 2rem;
+            padding: 1.5rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #333;
+            border-bottom: 1px solid #222;
+            background-color: rgba(10, 10, 10, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        .logo {
-            font-size: 1.5rem;
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.4rem;
             font-weight: 800;
-            letter-spacing: -1px;
+            letter-spacing: -0.5px;
+            color: var(--text-main);
+            text-transform: uppercase;
+        }
+
+        .logo-img {
+            height: 32px; /* Precision height to match text */
+            width: auto;
+        }
+
+        .contact-link {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .contact-link:hover {
             color: var(--accent-color);
         }
 
@@ -45,109 +71,140 @@
 
         h1 {
             font-size: 3.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             letter-spacing: -2px;
+            line-height: 1.1;
         }
 
         .hero p {
             font-size: 1.25rem;
             color: var(--text-dim);
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .section-title {
             text-align: center;
             color: var(--accent-color);
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.9rem;
+            letter-spacing: 3px;
+            font-size: 0.85rem;
             margin-bottom: 3rem;
+            font-weight: 700;
         }
 
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            padding: 4rem 2rem;
+            padding: 2rem;
             max-width: 1100px;
-            margin: 0 auto;
+            margin: 0 auto 6rem auto;
         }
 
         .card {
             background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 8px;
+            padding: 2.5rem;
+            border-radius: 12px;
             border: 1px solid #222;
-            transition: 0.3s;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .card:hover {
             border-color: var(--accent-color);
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 255, 204, 0.05);
         }
 
         .card h3 {
             margin-top: 0;
             color: var(--accent-color);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
         }
 
         .about {
-            background: #111;
-            padding: 6rem 2rem;
+            background: #0f0f0f;
+            padding: 8rem 2rem;
             text-align: center;
+            border-top: 1px solid #222;
         }
 
         .about-content {
-            max-width: 700px;
+            max-width: 750px;
             margin: 0 auto;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
         }
 
         .cta-button {
             background: var(--accent-color);
-            color: black;
-            padding: 1rem 2rem;
+            color: #000;
+            padding: 1.2rem 2.5rem;
             text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
+            font-weight: 700;
+            border-radius: 6px;
             display: inline-block;
-            margin-top: 2rem;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            background: #00d4aa;
+            transform: scale(1.05);
         }
 
         footer {
             padding: 4rem 2rem;
             text-align: center;
             color: var(--text-dim);
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             border-top: 1px solid #222;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            header { flex-direction: column; gap: 1rem; text-align: center; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">SrS LOGICS</div>
-        <nav>shubhamsinghvr@gmail.com</nav>
+        <div class="logo-container">
+            <img src="logo.png" alt="SrS" class="logo-img">
+            <span>SrS LOGICS</span>
+        </div>
+        <a href="mailto:shubhamsinghvr@gmail.com" class="contact-link">shubhamsinghvr@gmail.com</a>
     </header>
 
     <section class="hero">
         <h1>Architecting Data.<br>Engineering Growth.</h1>
         <p>High-performance data strategy for firms that demand precision. Founded by a UoN Data Scientist, we turn raw complexity into scalable competitive advantages.</p>
-        <a href="mailto:shubhamsinghvr@gmail.com" class="cta-button">INITIATE STRATEGY</a>
+        <a href="mailto:shubhamsinghvr@gmail.com" class="cta-button">Initiate Strategy</a>
     </section>
 
     <div class="section-title">Technical Expertise</div>
     <section class="grid">
         <div class="card">
             <h3>Massive Data Processing</h3>
-            <p>Architecting pipelines for 500,000+ records, ensuring zero-latency batch processing and complete data integrity.</p>
+            <p>Architecting pipelines for 500,000+ records, ensuring zero-latency batch processing and complete data integrity through optimized SQL logic.</p>
         </div>
         <div class="card">
             <h3>Backend Engineering</h3>
-            <p>Robust, high-security APIs developed with FastAPI and SQL to serve as the backbone of digital infrastructure.</p>
+            <p>Building robust, high-security APIs with FastAPI and scalable databases that serve as the backbone for high-traffic digital infrastructure.</p>
         </div>
-        <div class="card">
+        <div class="card)
             <h3>Strategic Insights</h3>
-            <p>Advanced predictive modeling and strategic roadmaps that transform raw data into founder-level decisions.</p>
+            <p>Moving beyond basic analytics to provide predictive modeling and strategic roadmaps that transform data into founder-level decisions.</p>
         </div>
     </section>
 
@@ -156,7 +213,11 @@
             <div class="section-title">The Philosophy</div>
             <h2>Logic Over Noise.</h2>
             <p>At SrS Logics, we don't react to volatility; we analyze it. Our systems are built to be Antifragile—maintaining peak performance and structural integrity regardless of external pressure.</p>
-            <p style="margin-top: 2rem; color: var(--text-dim);"><strong>Led by Shubham Singh</strong><br>MSc Data Science, University of Nottingham</p>
+            
+            <div style="margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid #222;">
+                <p style="color: var(--text-main); font-weight: 600; margin-bottom: 0.2rem;">Shubham Singh</p>
+                <p style="color: var(--text-dim); margin-top: 0;">MSc Data Science, University of Nottingham</p>
+            </div>
         </div>
     </section>
 
