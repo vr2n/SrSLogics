@@ -113,6 +113,7 @@ section {
   padding:2rem;
   border-radius:8px;
   border:1px solid #222;
+  font-weight:500;
 }
 
 .card h3 {
@@ -123,6 +124,11 @@ section {
 .center {
   text-align:center;
 }
+a:focus {
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+}
+
 
 footer {
   padding:3rem 2rem;
@@ -137,7 +143,8 @@ footer {
 <body>
 
 <header>
-  <div class="logo">SrS logics</div>
+    <div class="logo">SrS Logics</div>
+    <a href="mailto:shubhamsinghvr@gmail.com">Contact</a>
 </header>
 
 <main>
@@ -151,10 +158,18 @@ footer {
 <section>
   <div class="section-title">The Problem</div>
   <div class="grid">
-    <div class="card">Reports don’t match reality</div>
-    <div class="card">Pipelines fail silently</div>
-    <div class="card">Manual fixes never end</div>
-    <div class="card">Decisions lag behind data</div>
+    <div class="card">
+        <p><strong>Reports don’t match reality</strong></p>
+    </div>
+    <div class="card">
+        <p><strong>Pipelines fail silently</strong></p>
+    </div>
+    <div class="card">
+        <p><strong>Manual fixes never end</strong></p>
+    </div>
+    <div class="card">
+        <p><strong>Decisions lag behind data</strong></p>
+    </div>
   </div>
 </section>
 
@@ -179,6 +194,23 @@ footer {
     </div>
   </div>
 </section>
+<section>
+    <div class="section-title">How We Work</div>
+    <div class="grid">
+      <div class="card">
+        <h3>1. Diagnose</h3>
+        <p>We identify structural failure points across pipelines, APIs, and data models.</p>
+      </div>
+      <div class="card">
+        <h3>2. Design</h3>
+        <p>We define architectures that scale without accumulating technical debt.</p>
+      </div>
+      <div class="card">
+        <h3>3. Execute</h3>
+        <p>We build, fix, or guide execution with zero fluff and full accountability.</p>
+      </div>
+    </div>
+  </section>  
 
 <section class="center">
     <div class="section-title">Leadership</div>
@@ -191,7 +223,11 @@ footer {
       data foundations and replace them with architectures that leadership can 
       trust as a single source of truth.
     </p>
-  </section>
+</section>
+<section class="center">
+    <h2>Fix the system. Not the symptoms.</h2>
+    <a class="cta" href="mailto:shubhamsinghvr@gmail.com">INITIATE STRATEGY</a>
+</section>
   
 
 
